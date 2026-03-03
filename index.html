@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pac-Man Original Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="hud">
+            <div id="lives">VIDAS: ❤️❤️❤️</div>
+            <div id="score">PONTOS: 0</div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="420" height="460"></canvas>
+            
+            <div id="start-screen" class="overlay flex">
+                <h1>PAC-MAN</h1>
+                <button onclick="startGame()">INICIAR MISSÃO</button>
+            </div>
+
+            <div id="game-over" class="overlay">
+                <h2 id="status-text">FIM DE JOGO</h2>
+                <p>Pontos: <span id="final-score">0</span></p>
+                <div id="record-area">
+                    <input type="text" id="player-name" maxlength="3" placeholder="AAA">
+                    <button onclick="saveScore()">SALVAR</button>
+                </div>
+                <div class="leaderboard"><ul id="score-list"></ul></div>
+                <button onclick="location.reload()">RECOMECAR</button>
+            </div>
+        </div>
+
+        <div class="mobile-controls">
+            <button id="btn-up">↑</button>
+            <div class="row">
+                <button id="btn-left">←</button>
+                <button id="btn-down">↓</button>
+                <button id="btn-right">→</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
